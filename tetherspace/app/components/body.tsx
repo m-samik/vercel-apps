@@ -48,6 +48,42 @@ const Body = () => {
       <div>
         <img src="/assets/coins.jpg" alt="coins" className="w-full" />
       </div>
+      <div className="p-10">
+        <h1 className="text-2xl md:text-[3rem] font-bold text-center">
+          Explore the best P2P trading strategies
+        </h1>
+        <h1 className="text-sm md:text-lg pt-4 md:pt-8 text-white/80 text-center">
+          tetherspace provides you with the best P2P trading strategies to help
+          you maximize your profits when buying and selling Tether (USDT). Our
+          proven strategies will give you an edge in the crypto market.
+        </h1>
+      </div>
+      <div>
+        <img src="/assets/chart.jpg" alt="coins" className="w-full" />
+      </div>
+      <div className="p-10">
+        <h1 className="text-2xl md:text-[3rem] font-bold text-center">
+          Learn from experienced traders
+        </h1>
+        <h1 className="text-sm md:text-lg pt-4 md:pt-8 text-white/80 text-center">
+          Gain valuable insights from experienced traders on Tether Trader.
+          Learn their successful P2P trading strategies and apply them to your
+          own trading activities, increasing your chances of success.
+        </h1>
+      </div>
+      <div>
+        <img src="/assets/car.jpg" alt="coins" className="w-full" />
+      </div>
+      <div className="p-10">
+        <h1 className="text-2xl md:text-[3rem] font-bold text-center">
+          Stay updated with market trends
+        </h1>
+        <h1 className="text-sm md:text-lg pt-4 md:pt-8 text-white/80 text-center">
+          Tether Trader keeps you informed about the latest market trends and
+          developments in the crypto industry. Stay ahead of the curve and make
+          informed trading decisions based on real-time information.
+        </h1>
+      </div>
     </div>
   );
 };
