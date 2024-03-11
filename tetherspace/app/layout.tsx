@@ -1,9 +1,8 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { MuseoModerno } from "next/font/google";
 import "./globals.css";
-import { cn } from "./libs/utils";
 
-const inter = Inter({ subsets: ["latin"] });
+const museoModerno = MuseoModerno({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
   title: "tetherspace",
@@ -17,14 +16,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body
-        className={cn(
-          "bg-gradient-to-r from-black/20 to-white",
-          inter.className
-        )}
-      >
-        {children}
-      </body>
+      <body className={museoModerno.className}>{children}</body>
     </html>
   );
 }
