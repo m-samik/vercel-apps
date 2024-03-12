@@ -3,6 +3,7 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { FaInstagram, FaFacebook, FaXTwitter } from "react-icons/fa6";
+import { faqs } from "../libs/constants";
 
 const Body = () => {
   return (
@@ -64,7 +65,7 @@ const Body = () => {
           <img src="/assets/money.svg" alt="photo" />
         </div>
       </div>
-      <div className="py-10 md:py-20">
+      <div className="pb-10 pt-20  md:pt-20 md:pb-20" id="services">
         <h1 className="text-2xl md:text-[3rem] font-bold text-center">
           Explore the best P2P trading strategies
         </h1>
@@ -109,21 +110,45 @@ const Body = () => {
           <img src="/assets/mobilecoin.png" alt="photo" />
         </div>
       </div>
-      <div className="flex flex-row items-center py-20">
-        <div className="w-1/2 flex flex-col space-y-8">
-          <h1 className="text-[3rem] font-semibold">
+      <div id="faqs" className="py-20">
+        <h1 className="text-[2rem] md:text-[4rem] text-center font-semibold">
+          FAQs
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-8 pt-10">
+          {faqs.map((faq, index) => (
+            <div key={index} className="bg-[#17181E] p-6 rounded-lg shadow-md">
+              <h2 className="text-lg  font-semibold mb-2">{faq.question}</h2>
+              <p className="text-white/60">{faq.answer}</p>
+            </div>
+          ))}
+        </div>
+      </div>
+      <div
+        id="contactus"
+        className="flex space-y-8 md:space-y-0 flex-col md:flex-row items-center py-20"
+      >
+        <div className="w-full md:w-1/2 flex flex-col space-y-8">
+          <h1 className="text-[2rem] md:text-[4rem] font-semibold">
             Get a quote or set up a consultation
           </h1>
           <div>
-            <h2 className="text-[2rem] font-semibold">PHONE</h2>
-            <h2 className="text-[2rem]">(+91) 123 456 7890</h2>
+            <h2 className="text-[1.5rem] md:text-[2rem] font-semibold">
+              PHONE
+            </h2>
+            <h2 className="text-[1.5rem] md:text-[2rem]">(+91) 123 456 7890</h2>
           </div>
           <div>
-            <h2 className="text-[2rem] font-semibold">EMAIL</h2>
-            <h2 className="text-[2rem]">hello@tetherspace.com</h2>
+            <h2 className="text-[1.5rem] md:text-[2rem] font-semibold">
+              EMAIL
+            </h2>
+            <h2 className="text-[1.5rem] md:text-[2rem]">
+              hello@tetherspace.com
+            </h2>
           </div>
           <div>
-            <h2 className="text-[2rem] font-semibold">SOCIALS</h2>
+            <h2 className="text-[1.5rem] md:text-[2rem] font-semibold">
+              SOCIALS
+            </h2>
             <div className="flex flex-row space-x-8 pt-4">
               <FaXTwitter size={22} />
               <FaFacebook size={22} />
@@ -131,7 +156,7 @@ const Body = () => {
             </div>
           </div>
         </div>
-        <div className="w-1/2">
+        <div className="w-full md:w-1/2 ">
           <img src="/assets/robot.png" alt="robot" className="w-full" />
         </div>
       </div>
