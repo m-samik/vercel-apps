@@ -30,3 +30,24 @@ export const faqs = [
       "You can get started with Tetherspace by visiting our website and exploring our services. Feel free to contact us for a quote or consultation to learn more about how Tetherspace can benefit your crypto trading journey.",
   },
 ];
+
+export const services = [
+  {
+    title: "P2P Trading",
+    description:
+      "Explore the best P2P trading strategies to maximize your profits when buying and selling Tether (USDT). Our proven strategies will give you an edge in the crypto market.",
+    imageUrl: "/assets/img1.svg",
+  },
+  {
+    title: "Buy and Sell Tether (USDT)",
+    description:
+      "Gain valuable insights from experienced traders on Tetherspace Trader. Learn their successful P2P trading strategies and apply them to your own trading activities, increasing your chances of success.",
+    imageUrl: "/assets/buysellsvg.svg",
+  },
+  {
+    title: "Market Trends",
+    description:
+      "Tetherspace Trader keeps you informed about the latest market trends and developments in the crypto industry. Stay ahead of the curve and make informed trading decisions based on real-time information.",
+    imageUrl: "/assets/mangraph.svg",
+  },
+];

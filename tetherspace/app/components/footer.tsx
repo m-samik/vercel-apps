@@ -1,8 +1,10 @@
 "use client";
+import { useRouter } from "next/navigation";
 import React from "react";
 import { FaInstagram, FaFacebook, FaXTwitter } from "react-icons/fa6";
 
 const Footer = () => {
+  const router = useRouter();
   return (
     <>
       <div className="bg-gradient-to-r from-[#FFF5E1] to-[#FFFDFA] p-10 md:p-20">
@@ -11,7 +13,7 @@ const Footer = () => {
             Embark on Your Crypto Journey Today!
           </h1>
           <button
-            onClick={() => {}}
+            onClick={() => router.push("#contactus")}
             className="bg-orange-400 py-2 px-4 rounded-md mt-4 text-center"
           >
             Get Started

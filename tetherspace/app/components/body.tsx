@@ -3,12 +3,14 @@
 import React from "react";
 import { FaStar } from "react-icons/fa";
 import { FaInstagram, FaFacebook, FaXTwitter } from "react-icons/fa6";
-import { faqs } from "../libs/constants";
+import { faqs, services } from "../libs/constants";
+import { useRouter } from "next/navigation";
 
 const Body = () => {
+  const router = useRouter();
   return (
     <div className="min-h-screen mx-2 md:mx-40 my-10">
-      <div className="flex flex-row items-center pt-14">
+      <div className="flex flex-row items-center pt-20">
         <div>
           <h1 className="text-[2rem] md:text-[4rem] font-bold">
             Maximize your profits with{" "}
@@ -25,7 +27,7 @@ const Body = () => {
             Tether (USDT) on tetherspace.
           </h2>
           <button
-            onClick={() => {}}
+            onClick={() => router.push("#contactus")}
             className="bg-orange-400 py-2 px-4 rounded-md mt-4"
           >
             Contact Us
@@ -57,14 +59,28 @@ const Body = () => {
           <img src="/assets/buysellsvg.svg" alt="photo" className="w-full" />
         </div>
       </div>
-      <div className="md:pt-36 pt-24">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
-          <img src="/assets/bitcoinwithgift.svg" alt="photo" />
-          <img src="/assets/bitcoinwallet.svg" alt="photo" />
-          <img src="/assets/moneyhand.svg" alt="photo" />
-          <img src="/assets/money.svg" alt="photo" />
+
+      <div id="services" className="py-20 pt-40">
+        <h1 className="text-[2rem] md:text-[4rem] text-center font-semibold">
+          Services
+        </h1>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10 pt-10">
+          {services.map((service, index) => (
+            <div key={index} className="bg-[#17181E] rounded-lg shadow-md p-6">
+              <img
+                src={service.imageUrl}
+                alt="image"
+                className="w-full h-40 object-cover rounded-md mb-4"
+              />
+              <h2 className="text-xl text-white font-semibold mb-2">
+                {service.title}
+              </h2>
+              <p className="text-white/6 0">{service.description}</p>
+            </div>
+          ))}
         </div>
       </div>
+
       <div className="pb-10 pt-20  md:pt-20 md:pb-20" id="services">
         <h1 className="text-2xl md:text-[3rem] font-bold text-center">
           Explore the best P2P trading strategies
@@ -75,8 +91,12 @@ const Body = () => {
           proven strategies will give you an edge in the crypto market.
         </h1>
       </div>
-      <div>
-        <img src="/assets/coins.jpg" alt="coins" className="w-full py-10" />
+
+      <div className="py-10">
+        <div className="grid grid-cols-2 gap-10">
+          <img src="/assets/manhappy.svg" alt="photo" />
+          <img src="/assets/mangraph2.svg" alt="photo" />
+        </div>
       </div>
 
       <div className="py-10 md:py-20">
@@ -89,8 +109,11 @@ const Body = () => {
           own trading activities, increasing your chances of success.
         </h1>
       </div>
-      <div>
-        <img src="/assets/chart.jpg" alt="coins" className="w-full py-10" />
+      <div className="py-10">
+        <div className="grid grid-cols-2 gap-10">
+          <img src="/assets/mangraph.svg" alt="photo" />
+          <img src="/assets/mobilecoin.png" alt="photo" />
+        </div>
       </div>
       <div className="py-10 md:py-20">
         <h1 className="text-2xl md:text-[3rem] font-bold text-center">
@@ -102,14 +125,7 @@ const Body = () => {
           make informed trading decisions based on real-time information.
         </h1>
       </div>
-      <div className="py-10">
-        <div className="grid grid-cols-2 gap-10 md:grid-cols-4">
-          <img src="/assets/mangraph.svg" alt="photo" />
-          <img src="/assets/manhappy.svg" alt="photo" />
-          <img src="/assets/mangraph2.svg" alt="photo" />
-          <img src="/assets/mobilecoin.png" alt="photo" />
-        </div>
-      </div>
+
       <div id="faqs" className="py-20">
         <h1 className="text-[2rem] md:text-[4rem] text-center font-semibold">
           FAQs
@@ -125,30 +141,22 @@ const Body = () => {
       </div>
       <div
         id="contactus"
-        className="flex space-y-8 md:space-y-0 flex-col md:flex-row items-center py-20"
+        className="flex space-y-8 md:space-y-0 flex-col md:flex-row items-center py-36"
       >
         <div className="w-full md:w-1/2 flex flex-col space-y-8">
-          <h1 className="text-[2rem] md:text-[4rem] font-semibold">
+          <h1 className="text-[2rem] md:text-[3rem] font-semibold">
             Get a quote or set up a consultation
           </h1>
           <div>
-            <h2 className="text-[1.5rem] md:text-[2rem] font-semibold">
-              PHONE
-            </h2>
-            <h2 className="text-[1.5rem] md:text-[2rem]">(+91) 123 456 7890</h2>
+            <h2 className="text-lg md:text-[1.5rem] font-semibold">PHONE</h2>
+            <h2 className="text-lg md:text-[1.5rem]">(+91) 123 456 7890</h2>
           </div>
           <div>
-            <h2 className="text-[1.5rem] md:text-[2rem] font-semibold">
-              EMAIL
-            </h2>
-            <h2 className="text-[1.5rem] md:text-[2rem]">
-              hello@tetherspace.com
-            </h2>
+            <h2 className="text-lg md:text-[1.5rem] font-semibold">EMAIL</h2>
+            <h2 className="text-lg md:text-[1.5rem]">hello@tetherspace.com</h2>
           </div>
           <div>
-            <h2 className="text-[1.5rem] md:text-[2rem] font-semibold">
-              SOCIALS
-            </h2>
+            <h2 className="text-lg md:text-[1.5rem] font-semibold">SOCIALS</h2>
             <div className="flex flex-row space-x-8 pt-4">
               <FaXTwitter size={22} />
               <FaFacebook size={22} />
@@ -156,8 +164,12 @@ const Body = () => {
             </div>
           </div>
         </div>
-        <div className="w-full md:w-1/2 ">
-          <img src="/assets/robot.png" alt="robot" className="w-full" />
+        <div className="w-full md:w-1/2 md: pl-20">
+          <img
+            src="/assets/robot.png"
+            alt="robot"
+            className="w-[70%] h-[70%]"
+          />
         </div>
       </div>
     </div>
