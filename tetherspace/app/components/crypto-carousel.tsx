@@ -10,11 +10,21 @@ import Image from "next/image";
 const CryptoCarousel = () => {
   return (
     <Swiper
-      slidesPerView={8}
+      slidesPerView={4}
       spaceBetween={20}
       modules={[Autoplay]}
       autoplay={{ delay: 1000, disableOnInteraction: true }}
       loop={true}
+      breakpoints={{
+        640: {
+          slidesPerView: 2,
+          spaceBetween: 10,
+        },
+        1024: {
+          slidesPerView: 8,
+          spaceBetween: 20,
+        },
+      }}
     >
       {images.map((logo, index) => (
         <SwiperSlide key={index}>
