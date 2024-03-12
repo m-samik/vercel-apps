@@ -2,6 +2,8 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 import { FaInstagram, FaFacebook, FaXTwitter } from "react-icons/fa6";
+import { images } from "../libs/constants";
+import CryptoCarousel from "./crypto-carousel";
 
 const Footer = () => {
   const router = useRouter();
@@ -19,6 +21,10 @@ const Footer = () => {
             Get Started
           </button>
         </div>
+      </div>
+
+      <div className="bg-[#FFF5E1] py-10">
+        <CryptoCarousel />
       </div>
       <footer className="bg-[#17181E] py-8 px-4 md:px-10 lg:px-20 xl:px-32">
         <div className="flex flex-col md:space-x-8 md:flex-row justify-center items-center text-sm">

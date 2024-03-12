@@ -51,3 +51,18 @@ export const services = [
     imageUrl: "/assets/mangraph.svg",
   },
 ];
+
+export const images = [
+  { src: "Bitcoin.svg", alt: "Bitcoin" },
+  { src: "BusinessInsider.svg", alt: "Business Insider" },
+  { src: "Coindesk.svg", alt: "Coindesk" },
+  { src: "CoinEdition.svg", alt: "Coin Edition" },
+  { src: "CryptoDaily.svg", alt: "Crypto Daily" },
+  { src: "CT.svg", alt: "CT" },
+  { src: "FinanceMagnates.svg", alt: "Finance Magnates" },
+  { src: "Investing.svg", alt: "Investing" },
+  { src: "Kasobu.svg", alt: "Kasobu" },
+  { src: "SCMP.svg", alt: "SCMP" },
+  { src: "TET.svg", alt: "TET" },
+  { src: "TIA.svg", alt: "TIA" },
+];
