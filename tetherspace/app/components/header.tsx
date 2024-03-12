@@ -57,6 +57,24 @@ const Header = () => {
           >
             Contact Us
           </span>
+          <span
+            onClick={() => {
+              router.push("/terms-and-conditions");
+              toggleDrawer();
+            }}
+            className="text-xl cursor-pointer"
+          >
+            Terms and Conditions
+          </span>
+          <span
+            onClick={() => {
+              router.push("/privacy-policy");
+              toggleDrawer();
+            }}
+            className="text-xl cursor-pointer"
+          >
+            Privacy Policy
+          </span>
         </div>
       </div>
       <div className="fixed top-0 hidden md:flex h-14 w-full flex-row  items-center justify-between bg-[#17181E]">

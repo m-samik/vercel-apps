@@ -20,22 +20,66 @@ const Footer = () => {
           </button>
         </div>
       </div>
-      <div className="h-64 bg-[#17181E] flex flex-col justify-center items-center">
-        <div className="flex flex-row space-x-8 text-sm md:text-lg">
-          <span className="text-sm">Home</span>
-          <span className="text-sm">Our Services</span>
-          <span className="text-sm">FAQs</span>
-          <span className="text-sm">Contact Us</span>
+      <footer className="bg-[#17181E] py-8 px-4 md:px-10 lg:px-20 xl:px-32">
+        <div className="flex flex-col md:space-x-8 md:flex-row justify-center items-center text-sm">
+          <span
+            onClick={() => {
+              router.push("/");
+            }}
+            className="mb-4 md:mb-0 cursor-pointer"
+          >
+            Home
+          </span>
+          <span
+            onClick={() => {
+              router.push("#services");
+            }}
+            className="mb-4 md:mb-0 cursor-pointer"
+          >
+            Our Services
+          </span>
+          <span
+            onClick={() => {
+              router.push("#faqs");
+            }}
+            className="mb-4 md:mb-0 cursor-pointer"
+          >
+            FAQs
+          </span>
+          <span
+            onClick={() => {
+              router.push("#contactus");
+            }}
+            className="mb-4 md:mb-0 cursor-pointer"
+          >
+            Contact Us
+          </span>
+          <span
+            onClick={() => {
+              router.push("/terms-and-conditions");
+            }}
+            className="mb-4 md:mb-0 cursor-pointer"
+          >
+            Terms & Conditions
+          </span>
+          <span
+            onClick={() => {
+              router.push("/privacy-policy");
+            }}
+            className="mb-4 md:mb-0 cursor-pointer"
+          >
+            Privacy Policy
+          </span>
         </div>
-        <div className="flex flex-row space-x-8 pt-8">
-          <FaXTwitter size={22} />
-          <FaFacebook size={22} />
-          <FaInstagram size={22} />
+        <div className="flex justify-center items-center space-x-8 pt-4 md:pt-8">
+          <FaXTwitter size={22} className="text-white" />
+          <FaFacebook size={22} className="text-white" />
+          <FaInstagram size={22} className="text-white" />
         </div>
-        <div className="pt-8 text-white/80">
+        <div className="pt-4 md:pt-8 text-white/80 text-center">
           <h1 className="text-sm">© 2024 tetherspace</h1>
         </div>
-      </div>
+      </footer>
     </>
   );
 };

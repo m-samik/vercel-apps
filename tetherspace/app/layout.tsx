@@ -2,6 +2,8 @@ import type { Metadata } from "next";
 import { MuseoModerno } from "next/font/google";
 import "./globals.css";
 import { cn } from "./libs/utils";
+import Header from "./components/header";
+import Footer from "./components/footer";
 
 const museoModerno = MuseoModerno({ subsets: ["latin"] });
 
@@ -23,7 +25,9 @@ export default function RootLayout({
           museoModerno.className
         )}
       >
+        <Header />
         {children}
+        <Footer />
       </body>
     </html>
   );
